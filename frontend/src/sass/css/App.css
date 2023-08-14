@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+.sd-container{
+    display: flex;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    padding: 20px;
+}
+.sidebar{
+    background-color: black;
+    color:white;
+   
+    width: 200px;
+    transition:  all 0.5s;
+
+}
+.top_section{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+
+}
+.logo{
+    font-size:30px;
+    }
+    .bars{
+        display: flex;
+        font-size:25px;
+        margin-left:50px;
+    }
+    .link{
+        display:flex;
+        color:#ffff;
+        gap: 15px;
+        transition: all 0.5s;
+
+
+    }
+    .link:hover{
+        background:lightblue;
+        color:#000;
+        transition: all 0.5s
+    }
+    .active{
+        background:lightskyblue;
+        color:black;
+
+    }
+    .icon, .link_text{
+        font-size: 20px;
+    }

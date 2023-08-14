@@ -1,0 +1,37 @@
+* { box-sizing: border-box;}
+.container {
+    padding: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    
+}
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: black;
+    outline: none;
+    color: white;
+}
+
+hr{
+    border: 1px solid #0e0d0d;
+    margin-bottom: 25px;
+    
+}
+.acccreate:hover{
+    opacity: 1;
+}
+a{
+    color: white;
+}
+.signin{
+    background-color: white;
+    text-align: center;
+}
+#h{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    width: 50%;
+}
+#f{
+    color: blue;
+}
