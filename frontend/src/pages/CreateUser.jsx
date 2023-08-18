@@ -28,7 +28,7 @@ const CreateUser = () => {
 	} 
 	return (    <div className='ms-5 vh-100 bg-primary justify-content-center align-items-center'>  
 	<div className='w-300 bg-white rounded p-3'>       
-	<form onSubmit={handleSubmit}>    
+	<form  onSubmit={handleSubmit}>    
 	<h2>Add Student</h2>             
 	<div className='mb-2'>           
 	<label htmlFor="">FirstName</label>   

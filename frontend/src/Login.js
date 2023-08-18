@@ -1,12 +1,16 @@
 
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from 'axios';
 import './sass/components/login.scss'
 import './Login_validation';
 import validation from './Login_validation';
 
 function Login(){
+    
+        const location = useLocation();
+        console.log(location.pathname);
+      
     const [values, setValues]= useState({
         email: '',
         password: ''
@@ -60,6 +64,7 @@ function Login(){
             <p>Don't have an account? <Link to= "/Signup">create account</Link></p>
             
         </form>
+        
 </div>
 
 

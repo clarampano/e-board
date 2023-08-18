@@ -2,25 +2,28 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const app = express();
-//const multer= require('multer');
+const multer = require('multer');
 const path = require('path');
+//const multer= require('multer');
+//const path = require('path');
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'))
 //file uplaod management
-/*
+
 const storage = multer.diskStorage({
-    distination: (req, file, cb) =>{
-        cb(null , '/public/images')
+    distination: (req, file, cb) => {
+      cb(null , '/public/images')
     },
     filename: (req, file, cb) =>{
-        cb(null, file.filename + String(Date.now())+ "_" + path.extname("file.orginalname"));
+        cb(null, file.fieldname + Date.now() + ".jpg");
 
     }
 })
 const upload= multer({
     storage: storage
 })
-*/
+
 // Ends here
 
 const db= mysql.createConnection({
@@ -97,7 +100,10 @@ app.delete('/remove/:id',(req, res) =>{
     })
 })
 //ends here
-
+//Upload Image 
+app.post('/upload',upload.single('image'), (req, res) =>{
+    console.log(req.file.filename);
+})
 
 app.listen(8081,() => {
     console.log("Listening");

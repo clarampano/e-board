@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.css';
+import App2 from './App2';
 //import './sass/components/index.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
